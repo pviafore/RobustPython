@@ -10,7 +10,7 @@ class Ingredient:
     amount: Fraction
     units: str
 
-    def adjust(self, factor: Fraction):
+    def adjust_proportion(self, factor: Fraction):
         self.amount *= factor
 
 @dataclass
@@ -26,7 +26,7 @@ def adjust_recipe(recipe: Recipe, servings: int):
     new_ingredients = list(recipe.ingredients)
     recipe.clear_ingredients()
     for ingredient in new_ingredients:
-        ingredient.adjust(Fraction(servings, recipe.servings))
+        ingredient.adjust_proportion(Fraction(servings, recipe.servings))
     return Recipe(servings, new_ingredients)
 
 

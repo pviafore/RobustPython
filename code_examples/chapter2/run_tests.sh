@@ -4,7 +4,7 @@ python code_examples/chapter2/memory_value.py
 python code_examples/chapter2/double_items.py
 
 # Just prints out - just grab errros
-python code_examples/chapter2/print_items.py > /dev/null
+python code_examples/chapter2/print_items.py
 
 mypy code_examples/chapter2/*.py
 
