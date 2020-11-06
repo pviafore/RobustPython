@@ -1,9 +1,11 @@
-from typing import List, Tuple
 # Take a meal recipe and change the number of servings
-def adjust_recipe(recipe: List[Tuple[str, float, str]],
-                  servings: int):
-    new_recipe = [("servings", float(servings), "")]
-    old_servings = recipe[0][1]
+# by adjusting each ingredient
+# A recipe's first element is the number of servings, and the remainder
+# of elements is (name, amount, unit), such as ("flour", 1.5, "cup")
+
+def adjust_recipe(recipe, servings):
+    new_recipe = [servings]
+    old_servings = recipe[0]
     factor = servings / old_servings
     recipe.pop(0)
     while recipe:
@@ -14,9 +16,9 @@ def adjust_recipe(recipe: List[Tuple[str, float, str]],
 
 
 def test_adjust_recipe():
-    old_recipe = [("servings", 2, ""), ("flour", 1.5, "cups")]
+    old_recipe = [2, ("flour", 1.5, "cups")]
     adjusted = adjust_recipe(old_recipe, 4)
-    assert [("servings", 4, ""), ("flour", 3, "cups")] == adjusted
+    assert [4, ("flour", 3, "cups")] == adjusted
     assert old_recipe == []
 
 

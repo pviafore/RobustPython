@@ -22,7 +22,8 @@ class Recipe:
         self.ingredients.clear()
     
 # Take a meal recipe and change the number of servings
-def adjust_recipe(recipe: Recipe, servings: int):
+# recipe is a Recipe class
+def adjust_recipe(recipe, servings):
     new_ingredients = list(recipe.ingredients)
     recipe.clear_ingredients()
     for ingredient in new_ingredients:
