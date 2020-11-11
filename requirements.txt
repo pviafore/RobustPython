@@ -1,2 +1,4 @@
 mypy
 pyre-check
+pytype
+monkeytype
