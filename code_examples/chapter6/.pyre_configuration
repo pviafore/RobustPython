@@ -1,0 +1,7 @@
+{
+  "binary": "/home/pat/.pyenv/versions/3.9.0/bin/pyre.bin",
+  "source_directories": [
+    "."
+  ],
+  "taint_models_path": ["stubs/taint"]
+}

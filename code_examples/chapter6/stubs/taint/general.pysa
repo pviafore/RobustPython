@@ -1,0 +1,6 @@
+# model for raw_input
+def input(__prompt = ...) -> TaintSource[UserControlled]: ...
+
+# model for os.system
+def os.system(command: TaintSink[RemoteCodeExecution]): ...
+
