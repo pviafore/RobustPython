@@ -11,3 +11,11 @@ echo "CHAPTER 3 TESTS"
 
 echo "CHAPTER 4 TESTS"
 ./code_examples/chapter4/run_tests.sh
+
+echo "CHAPTER 5 TESTS"
+./code_examples/chapter5/run_tests.sh
+
+# chapter 7 is just pyre, so no custom code
+
+echo "CHAPTER 7 TESTS"
+./code_examples/chapter7/run_tests.sh

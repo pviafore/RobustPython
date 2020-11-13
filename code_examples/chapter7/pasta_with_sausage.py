@@ -70,7 +70,6 @@ class Receptacle:
         return Ingredient('/'.join(names), 1, 'Mixture')
 
 
-        
 def make_pasta_with_sausage(servings):
     sauté_pan = Receptacle('Sauté Pan')
     pasta_pot = Receptacle('Stock Pot')
@@ -117,10 +116,6 @@ def make_pasta_with_sausage(servings):
 
     print("Serving")
     dishes = automated_recipe_maker.divide(sauté_pan, servings)
-    
 
     automated_recipe_maker.garnish(dishes, grated_cheese)
     return dishes
-
-
-make_pasta_with_sausage(3)
