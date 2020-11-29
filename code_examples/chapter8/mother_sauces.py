@@ -22,9 +22,9 @@ try:
 except:
     pass
 
-for sauce in MotherSauce:
-    print(f"{sauce.name} {sauce.value}")
-
+print(list(enumerate(MotherSauce, start=1)))
+assert list(enumerate(MotherSauce, start=1)) == [(1, MotherSauce.BÉCHAMEL), (2, MotherSauce.VELOUTÉ), (3, MotherSauce.ESPAGNOLE),
+                                                 (4, MotherSauce.TOMATO), (5,MotherSauce.HOLLANDAISE)]
 def create_daughter_sauce(mother_sauce: MotherSauce, 
                           extra_ingredients: List[str]):
     pass 
