@@ -15,4 +15,6 @@ def load_restaurant(restaurant: Restaurant):
     pass
 
 import restaurant
-load_restaurant(restaurant)
+
+#mypy does not support modules as protocols yet
+load_restaurant(restaurant) # type: ignore
