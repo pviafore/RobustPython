@@ -26,7 +26,7 @@ class Recipe:
     aromatics: Set[Ingredient]
     broth: Broth
     vegetables: Set[Ingredient]
-    proteins: Set[Ingredient]
+    meats: Set[Ingredient]
     starches: Set[Ingredient]
     garnishes: Set[Ingredient]
     time_to_cook: datetime.timedelta
@@ -44,7 +44,7 @@ soup = Recipe(
     aromatics={pepper, garlic},
     broth=Broth.CHICKEN,
     vegetables={celery, onion, carrots},
-    proteins={chicken},
+    meats={chicken},
     starches={noodles},
     garnishes={parsley},
     time_to_cook=datetime.timedelta(minutes=60))
@@ -61,7 +61,7 @@ soup = Recipe(
     aromatics=set(),
     broth=Broth.CHICKEN,
     vegetables=set(),
-    proteins=set(),
+    meats=set(),
     starches=set(),
     garnishes=set(), 
     time_to_cook=datetime.timedelta(seconds=3600))

@@ -28,3 +28,12 @@ echo "CHAPTER 9 TESTS"
 
 echo "CHAPTER 10 TESTS"
 ./code_examples/chapter10/run_tests.sh
+
+echo "CHAPTER 11 TESTS"
+./code_examples/chapter11/run_tests.sh
+
+echo "CHAPTER 12 TESTS"
+./code_examples/chapter12/run_tests.sh
+
+echo "CHAPTER 13 TESTS"
+./code_examples/chapter13/run_tests.sh

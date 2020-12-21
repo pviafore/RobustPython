@@ -25,19 +25,19 @@ class Recipe: # <4>
     aromatics: Set[Ingredient]
     broth: Broth
     vegetables: Set[Ingredient]
-    proteins: Set[Ingredient]
+    meats: Set[Ingredient]
     starches: Set[Ingredient]
     garnishes: Set[Ingredient]
     time_to_cook: datetime.timedelta
 
     def make_vegetarian(self):
-        self.proteins.clear()
+        self.meats.clear()
         self.broth = Broth.VEGETABLE
 
     def get_ingredient_names(self):
         ingredients = (self.aromatics | 
                        self.vegetables |
-                       self.proteins |
+                       self.meats |
                        self.starches |
                        self.garnishes)              
 
@@ -57,7 +57,7 @@ chicken_noodle_soup = Recipe(
     aromatics={pepper, garlic},
     broth=Broth.CHICKEN,
     vegetables={celery, onion, carrots},
-    proteins={chicken},
+    meats={chicken},
     starches={noodles},
     garnishes={parsley},
     time_to_cook=datetime.timedelta(minutes=60))
