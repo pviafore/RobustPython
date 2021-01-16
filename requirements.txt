@@ -1,4 +1,6 @@
 mypy
+monkeytype
+pydantic
 pyre-check
 pytype
-monkeytype
+pyyaml

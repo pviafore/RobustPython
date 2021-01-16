@@ -1,0 +1,67 @@
+Name is zero characters
+Name is not a string
+Name is longer than 32 characters
+Name field is missing
+Name contains invalid characters
+Owners Name is empty
+Owner's name is missing
+Owner's name is an integer
+Address is not a valid address
+Address is empty
+Address is missing
+Address is an integer
+Employees is empty
+Employees is not a list
+Employees is a list of strings
+Employees is missing
+There is not 1 chef
+There is not 1 server
+Employees' name is blank
+Employee's name is missing
+Employee's position is missing
+Employees's name is an integer
+Employee's position is not an approved position
+Employee's position is an integer
+Employee does not have  payment information
+Employee's bank payment information is a string
+Employee's address is not a valid location
+Employee's has payment information as a dictionary, but no bank details or address
+Employee's payment informations has both bank details and address
+Employee's address is missing
+Employee's address is blank
+Employee's address is a string
+Employee's routing number is a list
+Employee's routing number is missing
+Employee's routing number is not a routing number
+Employee's routing number is an integer that gets truncated
+Employee's routing number is blank
+Employee's account number is a list
+Employee's account number is missing
+Employee's account number is not an account number number
+Employee's account number is an integer that gets truncated
+Employee's account number is blank
+Dishes is missing
+Dishes is a string
+Less than three dishes
+Dish's name is blank
+Dish's name is an integer
+Dish's name is missing
+Dish's price is missing
+Dish's price is a set
+Dish's price is negative
+Dish's name is too long
+dish's description is blank
+Dish's description is missing
+Dish's description is an integer
+Dish's description is too long
+Dish's picture is an int
+Dish's picture is not a file on the filesystem
+Dish's picture is not a valid picture type
+Dish's do not have unique names
+Number of Seats is missing
+Number of Seats is a string
+Number of seats is negative
+To Go is missing
+To go is a string
+Delivery is missing
+Delivery is a string
