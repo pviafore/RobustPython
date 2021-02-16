@@ -4,3 +4,7 @@ pydantic
 pyre-check
 pytype
 pyyaml
+rx
+stevedore
+
+code_examples/plugin

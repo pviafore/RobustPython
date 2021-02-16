@@ -46,3 +46,12 @@ echo "CHAPTER 15 TESTS"
 
 echo "CHAPTER 17 TESTS"
 ./code_examples/chapter17/run_tests.sh
+
+echo "CHAPTER 18 TESTS"
+./code_examples/chapter18/run_tests.sh
+
+echo "CHAPTER 19 TESTS"
+./code_examples/chapter19/run_tests.sh
+
+echo "CHAPTER 20 TESTS"
+./code_examples/chapter20/run_tests.sh

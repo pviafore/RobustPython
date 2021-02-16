@@ -39,7 +39,7 @@ assert restaurant == {
     },
     {
         "name": "Illusory Ilsa",
-        "position": "Hostess",
+        "position": "Host",
         "payment_details": {
             "bank_details": {
                 "routing_number": '123456789',
@@ -82,7 +82,7 @@ class Address(TypedDict):
 
 AddressOrBankDetails = Union[Address, BankDetails]
 
-Position = Literal['Chef', 'Sous Chef', 'Host', 'Hostess',
+Position = Literal['Chef', 'Sous Chef', 'Host',
                    'Server', 'Delivery Driver']
 
 class Dish(TypedDict):

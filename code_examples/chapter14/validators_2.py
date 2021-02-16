@@ -18,7 +18,7 @@ class Address:
 
 AddressOrBankDetails = Union[Address, BankDetails]
 
-Position = Literal['Chef', 'Sous Chef', 'Host', 'Hostess',
+Position = Literal['Chef', 'Sous Chef', 'Host',
                    'Server', 'Delivery Driver']
 @dataclass
 class Employee:

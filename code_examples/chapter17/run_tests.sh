@@ -1,6 +1,7 @@
 #! /bin/bash -eu
 python code_examples/chapter17/call_repeat.py
-python code_examples/chapter17/matching_engine.py
+python code_examples/chapter17/recommendation.py
+python code_examples/chapter17/recommendation_improved.py
 
 mypy code_examples/chapter17/*.py
 

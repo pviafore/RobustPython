@@ -133,3 +133,6 @@ dmypy.json
 
 *monkeytype*
 .pytype
+
+# pylint chapter example
+error.txt

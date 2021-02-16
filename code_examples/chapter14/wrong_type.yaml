@@ -21,7 +21,7 @@ employees:
         routing_number: "123456789"
         account_number: "123456789012"
   - name: Illusory Ilsa
-    position: Hostess
+    position: Host
     payment_details:
       bank_details:
         routing_number: "123456789"
