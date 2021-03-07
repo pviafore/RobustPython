@@ -35,3 +35,15 @@ def test_meal_going_over_calories_does_not_conflict_with_previous_meals():
     assert_no_warnings_displayed_on_meal("Fish 'n' Chips")
     assert_checkmark_on_meal("Fish 'n' Chips")
     assert_meal_is_over_calories("Banana Split")    
+
+def test_failing_mutmut():
+    clear_warnings()
+    meals = [Meal("Fish 'n' Chips", 1000),
+             Meal("Late-Night Cookies", 300),
+             Meal("Banana Split", 400)]
+    check_meals_for_calorie_overage(meals, 1300)
+    assert_no_warnings_displayed_on_meal("Fish 'n' Chips")
+    assert_checkmark_on_meal("Fish 'n' Chips")
+    assert_no_warnings_displayed_on_meal("Late-Night Cookies")
+    assert_checkmark_on_meal("Late-Night Cookies")
+    assert_meal_is_over_calories("Banana Split")    
