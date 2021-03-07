@@ -136,3 +136,9 @@ dmypy.json
 
 # pylint chapter example
 error.txt
+
+# behave chapter reports
+reports/
+
+# mutation testing
+.mutmut-cache
