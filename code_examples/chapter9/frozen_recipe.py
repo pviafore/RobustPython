@@ -23,12 +23,12 @@ class Ingredient:
 
 @dataclass(frozen=True)
 class Recipe:
-    aromatics: Set[Ingredient]
+    aromatics: set[Ingredient]
     broth: Broth
-    vegetables: Set[Ingredient]
-    meats: Set[Ingredient]
-    starches: Set[Ingredient]
-    garnishes: Set[Ingredient]
+    vegetables: set[Ingredient]
+    meats: set[Ingredient]
+    starches: set[Ingredient]
+    garnishes: set[Ingredient]
     time_to_cook: datetime.timedelta
 
 pepper = Ingredient("Pepper", 1, ImperialMeasure.TABLESPOON)

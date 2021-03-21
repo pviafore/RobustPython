@@ -8,7 +8,7 @@ class Error:
 @dataclass
 class Snack:
     name: str
-    condiments: Set[str]
+    condiments: set[str]
     
 snack: Union[Snack, Error] = Snack("Hotdog", {"Mustard", "Ketchup"})
 

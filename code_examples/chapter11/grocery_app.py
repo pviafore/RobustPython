@@ -18,7 +18,7 @@ class Ingredient:
         # make sure we are adding the same ingredient
         assert (self.name, self.brand) == (rhs.name, rhs.brand)
         # build up conversion chart (lhs, rhs): multiplication factor
-        conversion: Dict[Tuple[ImperialMeasure, ImperialMeasure], float] = {
+        conversion: dict[tuple[ImperialMeasure, ImperialMeasure], float] = {
             (ImperialMeasure.CUP, ImperialMeasure.CUP): 1,
             (ImperialMeasure.CUP, ImperialMeasure.TABLESPOON): 16,
             (ImperialMeasure.CUP, ImperialMeasure.TEASPOON): 48,
@@ -39,7 +39,7 @@ class Ingredient:
 @dataclass
 class Recipe:
     name: str
-    ingredients: List[Ingredient]
+    ingredients: list[Ingredient]
     servings: int
 
 from dataclasses import dataclass
@@ -63,7 +63,7 @@ class Item:
     price_in_cents: int
     amount: float
 
-Inventory = Dict[Store, List[Item]]   
+Inventory = dict[Store, list[Item]]   
 
 spaghetti = Item(
     "Spaghetti",
@@ -72,8 +72,8 @@ spaghetti = Item(
     amount=4,
     price_in_cents=160
 ) 
-reserved_items: List[Item] = []
-delivered_items: List[Item] = []
+reserved_items: list[Item] = []
+delivered_items: list[Item] = []
 def get_grocery_inventory() -> Inventory:
     # reach out to APIs and populate the dictionary
     return {
@@ -96,12 +96,12 @@ class Order:
     ''' An Order class that represents a list of ingredients '''
     def __init__(self, recipes: Iterable[Recipe]):
         self.__confirmed = False
-        self.__ingredients: Set[Ingredient] = set()
+        self.__ingredients: set[Ingredient] = set()
         for recipe in recipes:
             for ingredient in recipe.ingredients:
                 self.add_ingredient(ingredient)
 
-    def get_ingredients(self) -> List[Ingredient]:
+    def get_ingredients(self) -> list[Ingredient]:
         ''' Return a alphabetically sorted list of ingredients '''
         # return a copy so that users won't inadvertently mess with 
         # our internal data
@@ -160,7 +160,7 @@ class _GroceryList:
     def has_reserved_items(self):
         pass
 
-    def get_grocery_order(self) -> List[Item]:
+    def get_grocery_order(self) -> list[Item]:
         return [spaghetti]
 
 def wait_for_user_grocery_confirmation(grocery_list: _GroceryList):

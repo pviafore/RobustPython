@@ -69,7 +69,7 @@ assert restaurant == {
     "delivery": False
 }
 
-from typing import Literal,List,TypedDict,Union
+from typing import Literal,TypedDict,Union
 class AccountAndRoutingNumber(TypedDict):
     account_number: str
     routing_number: str
@@ -102,8 +102,8 @@ class Restaurant(TypedDict):
     name: str
     owner: str
     address: str
-    employees: List[Employee]
-    dishes: List[Dish]
+    employees: list[Employee]
+    dishes: list[Dish]
     number_of_seats: int
     to_go: bool
     delivery: bool

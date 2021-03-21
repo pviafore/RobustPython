@@ -6,7 +6,7 @@ def is_sauce(t):
 class PizzaSpecification:
     def __init__(self,
                   dough_radius_in_inches: int,
-                  toppings: List[str]):
+                  toppings: list[str]):
         assert 6 <= dough_radius_in_inches <= 12, \
         'Dough must be between 6 and 12 inches'
         sauces = [t for t in toppings if is_sauce(t)]

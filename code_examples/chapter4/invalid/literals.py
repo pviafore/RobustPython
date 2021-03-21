@@ -9,7 +9,7 @@ class Error:
 @dataclass
 class Snack:
     name: Literal["Pretzel", "Hotdog"]
-    condiments: Set[Literal["Mustard", "Ketchup"]]
+    condiments: set[Literal["Mustard", "Ketchup"]]
 
 Error(0, False)
 Snack("Not Valid", set())

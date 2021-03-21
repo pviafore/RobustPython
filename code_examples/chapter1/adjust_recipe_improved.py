@@ -16,7 +16,7 @@ class Ingredient:
 @dataclass
 class Recipe:
     servings: int
-    ingredients: List[Ingredient]
+    ingredients: list[Ingredient]
 
     def clear_ingredients(self):
         self.ingredients.clear()

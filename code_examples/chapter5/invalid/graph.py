@@ -17,7 +17,7 @@ class Graph(Generic[T, W]):
     def add_relation(self, node: T, to: W):
         self.edges[node].append(to)
 
-    def get_relations(self, node: T) -> List[W]:
+    def get_relations(self, node: T) -> list[W]:
         return self.edges[node]
 
 restaurants: Graph[Restaurant, Restaurant] = Graph()

@@ -9,12 +9,12 @@ class PizzaException(RuntimeError):
 class PizzaSpecification:
     def __init__(self,
                   dough_radius_in_inches: int,
-                  toppings: List[str]):
+                  toppings: list[str]):
         assert 6 <= dough_radius_in_inches <= 12, \
             'Dough must be between 6 and 12 inches'
         
         self.__dough_radius_in_inches = dough_radius_in_inches
-        self.__toppings: List[str] = []
+        self.__toppings: list[str] = []
         for topping in toppings:
             self.add_topping(topping) # <1>
 

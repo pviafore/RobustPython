@@ -9,11 +9,11 @@ class Worker:
     pass
 
 open_time = datetime.datetime.now()
-workers: List[str] = find_workers_available_for_time(open_time)
-numbers: List[int] = []
+workers: list[str] = find_workers_available_for_time(open_time)
+numbers: list[int] = []
 ratio: float = get_ratio(5,3)
 
 number: int = 0
 text: str = "useless"
-values: List[float] = [1.2, 3.4, 6.0]
+values: list[float] = [1.2, 3.4, 6.0]
 worker: Worker = Worker()

@@ -19,8 +19,8 @@ APIResponse = Union[T, APIErrorResponse]
 def get_nutrition_info(recipe: str) -> APIResponse[NutritionInfo]:
      return APIErrorResponse() 
 
-def get_ingredients(recipe: str) -> APIResponse[List[Ingredient]]:
+def get_ingredients(recipe: str) -> APIResponse[list[Ingredient]]:
     return []
 
-def get_restaurants_serving(recipe: str) -> APIResponse[List[Restaurant]]:
+def get_restaurants_serving(recipe: str) -> APIResponse[list[Restaurant]]:
     return [Restaurant()] 

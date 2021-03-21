@@ -3,7 +3,7 @@ import random
 from typing import List
 
 class WorkerDatabase:
-    def get_all_workers(self) -> List[str]:
+    def get_all_workers(self) -> list[str]:
         return []
 
 def get_emergency_workers():

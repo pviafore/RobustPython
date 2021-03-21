@@ -7,7 +7,7 @@ class BLTSandwich:
         # This class handles a fully constructed BLT sandwich
         # ... 
 
-    def split_in_half(self) -> Tuple['BLTSandwich', 'BLTSandwich']:
+    def split_in_half(self) -> tuple['BLTSandwich', 'BLTSandwich']:
         # Instructions for how to split a sandwich in half
         # Cut along diagonal, wrap separately, etc.
         # Return two sandwiches in return
@@ -20,7 +20,7 @@ class Chili:
         # This class handles a fully loaded chili
         # ... 
 
-    def split_in_half(self) -> Tuple['Chili', 'Chili']:
+    def split_in_half(self) -> tuple['Chili', 'Chili']:
         # Instructions for how to split chili in half
         # Ladle into new container, add toppings
         # Return two cups of chili in return

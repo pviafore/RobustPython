@@ -9,7 +9,7 @@ MOTHER_SAUCES = (BÉCHAMEL, VELOUTÉ, ESPAGNOLE, TOMATO, HOLLANDAISE)
 assert MOTHER_SAUCES[2] ==  "Espagnole"
 
 def create_daughter_sauce(mother_sauce: str, 
-                          extra_ingredients: List[str]):
+                          extra_ingredients: list[str]):
     pass
 
 create_daughter_sauce(MOTHER_SAUCES[0], ["Onions"]) # not super helpful

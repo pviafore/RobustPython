@@ -3,7 +3,7 @@ import datetime
 from dataclasses import dataclass
 from typing import Any, List, Dict, Set, Union
 
-notifications: List[Any] = []
+notifications: list[Any] = []
 
 Dish = str
 Ingredient = str
@@ -16,11 +16,11 @@ class NewSpecial:
 
 @dataclass
 class IngredientsOutOfStock:
-    ingredients: Set[Ingredient]
+    ingredients: set[Ingredient]
 
 @dataclass
 class IngredientsExpired:
-    ingredients: Set[Ingredient]
+    ingredients: set[Ingredient]
 
 @dataclass
 class NewMenuItem:
@@ -86,7 +86,7 @@ def send_to_supplier(notification: Notification):
         # ... snip send text ...
         notifications.append(("supplier", notification.ingredients))
 
-users_to_notify: Dict[type, List[NotificationMethod]] = {
+users_to_notify: dict[type, list[NotificationMethod]] = {
     NewSpecial: [SupplierAPI(), Email("boss@company.org"), Email("marketing@company.org"), Text("555-2345")],
     IngredientsOutOfStock: [SupplierAPI(), Email("boss@company.org")],
     IngredientsExpired: [SupplierAPI(), Email("boss@company.org")],

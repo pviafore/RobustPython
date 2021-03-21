@@ -1,6 +1,6 @@
 from pydantic.dataclasses import dataclass
 from pydantic import constr, PositiveInt, ValidationError
-from typing import List, Literal, Optional, Union
+from typing import Literal, Optional, Union
 @dataclass
 class AccountAndRoutingNumber:
     account_number: constr(min_length=9,max_length=9)
@@ -39,8 +39,8 @@ class Restaurant:
                   min_length=1, max_length=16)
     owner: constr(min_length=1)
     address: constr(min_length=1)
-    employees: List[Employee]
-    dishes: List[Dish]
+    employees: list[Employee]
+    dishes: list[Dish]
     number_of_seats: PositiveInt
     to_go: bool
     delivery: bool

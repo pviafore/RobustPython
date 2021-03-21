@@ -6,12 +6,12 @@ from typing import List
 class Cookbook:
     author: str
 
-def create_author_count(cookbooks: List[Cookbook]):
+def create_author_count_mapping(cookbooks: list[Cookbook]):
     return Counter(book.author for book in cookbooks) 
 
 def test_create_author_count():
     cookbooks = [Cookbook('Pat Viafore'), Cookbook('Pat Viafore'), Cookbook('J. Kenji Lopez-Alt')]
-    assert create_author_count(cookbooks) == {
+    assert create_author_count_mapping(cookbooks) == {
         'Pat Viafore': 2,
         'J. Kenji Lopez-Alt': 1
     }

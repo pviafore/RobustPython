@@ -11,7 +11,7 @@ def get_aliases(text):
         return ['arugula']
 
 class AliasedIngredients(collections.abc.Set):
-    def __init__(self, ingredients: Set[str]):
+    def __init__(self, ingredients: set[str]):
         self.ingredients = ingredients
     
     def __contains__(self, value: str):

@@ -6,9 +6,9 @@ from typing import Dict, List
 class Cookbook:
     author: str
 
-AuthorToCountMapping = Dict[str, int]
-def count_authors(cookbooks: List[Cookbook]) -> AuthorToCountMapping:
-    counter: Dict[str, int] = defaultdict(lambda: 0)
+AuthorToCountMapping = dict[str, int]
+def count_authors(cookbooks: list[Cookbook]) -> AuthorToCountMapping:
+    counter: dict[str, int] = defaultdict(lambda: 0)
     for book in cookbooks:
         counter[book.author] += 1
     return counter

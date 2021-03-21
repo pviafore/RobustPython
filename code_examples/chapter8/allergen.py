@@ -10,4 +10,4 @@ class Allergen(Enum):
     DAIRY = auto()
     
     
-allergens: Set[Allergen] = {Allergen.FISH, Allergen.SOY}
+allergens: set[Allergen] = {Allergen.FISH, Allergen.SOY}

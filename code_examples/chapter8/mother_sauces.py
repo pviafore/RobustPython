@@ -26,7 +26,7 @@ print(list(enumerate(MotherSauce, start=1)))
 assert list(enumerate(MotherSauce, start=1)) == [(1, MotherSauce.BÉCHAMEL), (2, MotherSauce.VELOUTÉ), (3, MotherSauce.ESPAGNOLE),
                                                  (4, MotherSauce.TOMATO), (5,MotherSauce.HOLLANDAISE)]
 def create_daughter_sauce(mother_sauce: MotherSauce, 
-                          extra_ingredients: List[str]):
+                          extra_ingredients: list[str]):
     pass 
 
 create_daughter_sauce(MotherSauce.TOMATO, [])

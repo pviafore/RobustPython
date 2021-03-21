@@ -22,12 +22,12 @@ class Ingredient:
 
 @dataclass(eq=True)
 class Recipe: # <4>
-    aromatics: Set[Ingredient]
+    aromatics: set[Ingredient]
     broth: Broth
-    vegetables: Set[Ingredient]
-    meats: Set[Ingredient]
-    starches: Set[Ingredient]
-    garnishes: Set[Ingredient]
+    vegetables: set[Ingredient]
+    meats: set[Ingredient]
+    starches: set[Ingredient]
+    garnishes: set[Ingredient]
     time_to_cook: datetime.timedelta
 
     def make_vegetarian(self):

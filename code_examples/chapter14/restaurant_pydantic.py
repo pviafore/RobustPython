@@ -39,8 +39,8 @@ class Restaurant:
     name: str
     owner: str
     address: str
-    employees: List[Employee]
-    dishes: List[Dish]
+    employees: list[Employee]
+    dishes: list[Dish]
     number_of_seats: int
     to_go: bool
     delivery: bool

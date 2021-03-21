@@ -3,8 +3,8 @@ from typing import List, Protocol
 class Restaurant(Protocol):
     name: str
     address: str
-    standard_lunch_entries: List[str]
-    other_entries: List[str]
+    standard_lunch_entries: list[str]
+    other_entries: list[str]
 
     def render_menu(self) -> str:
         ...

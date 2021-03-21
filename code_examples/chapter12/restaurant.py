@@ -27,8 +27,8 @@ class Restaurant:
     def __init__(self,
                  name: str,
                  location: Coordinates,
-                 employees: List[Employee],
-                 inventory: List[Ingredient],
+                 employees: list[Employee],
+                 inventory: list[Ingredient],
                  menu:  Menu,
                  finances: Finances):
         self.name = name
@@ -40,14 +40,14 @@ class Restaurant:
 
 
     def transfer_employees(self,
-                           employees: List[Employee],
+                           employees: list[Employee],
                            restaurant: 'Restaurant'):
         pass
 
     def order_dish(self, dish: Dish):
         pass
 
-    def add_inventory(self, ingredients: List[Ingredient], cost_in_cents: int):
+    def add_inventory(self, ingredients: list[Ingredient], cost_in_cents: int):
         pass
 
     def register_hours_employee_worked(self, 
@@ -78,8 +78,8 @@ class FoodTruck(Restaurant):
     def __init__(self, 
                  name: str,
                  location: Coordinates,
-                 employees: List[Employee],
-                 inventory: List[Ingredient],
+                 employees: list[Employee],
+                 inventory: list[Ingredient],
                  menu:  Menu,
                  finances: Finances):
         super().__init__( name, location, employees,inventory, menu, finances)
@@ -106,7 +106,7 @@ def display_restaurant_data(restaurant: Restaurant):
     print(data)
     # ... snip drawing code here ...
 
-restaurants: List[Restaurant] = [food_truck]
+restaurants: list[Restaurant] = [food_truck]
 for restaurant in restaurants:
     display_restaurant_data(restaurant)
 
@@ -116,11 +116,11 @@ class RestrictedMenuRestaurant(Restaurant):
     def __init__(self,
                  name: str,
                  location: Coordinates,
-                 employees: List[Employee],
-                 inventory: List[Ingredient],
+                 employees: list[Employee],
+                 inventory: list[Ingredient],
                  menu: Menu,
                  finances: Finances,
-                 restricted_items: List[Ingredient]):
+                 restricted_items: list[Ingredient]):
         super().__init__(name,location,employees,inventory,menu,finances)
         self.__restricted_items = restricted_items
 
