@@ -30,6 +30,6 @@ class PizzaSpecification:
                raise PizzaException('Pizza may only have one sauce')
         
         if is_sauce(topping):
-            self.__toppings = [topping] + self.__toppings
+            self.__toppings.insert(0, topping)
         else:
             self.__toppings.append(topping)

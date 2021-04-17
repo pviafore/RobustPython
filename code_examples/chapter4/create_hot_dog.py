@@ -1,6 +1,14 @@
 def dispense_bun():
-    return None
+    return Bun()
 
+class HotDog:
+    
+    def add_condiments(self, *args):
+        pass
+
+class Bun:
+    def add_frank(self, frank: str) -> HotDog:
+        return HotDog()
 
 def dispense_ketchup():
     return None
@@ -8,23 +16,17 @@ def dispense_ketchup():
 def dispense_mustard():
     return None
 
-class HotDog:
-    def place_in_bun(self, bun):
-        pass
-    
-    def add_condiments(self, *args):
-        pass
+def dispense_frank() -> str:
+    return "frank"
 
-def dispense_hotdog() -> HotDog:
-    return HotDog()
+def dispense_hot_dog_to_customer(hot_dog: HotDog):
+    pass
 
 def create_hot_dog():
     bun = dispense_bun()
-    hotdog = dispense_hotdog()
-    hotdog.place_in_bun(bun)
+    frank = dispense_frank()
+    hot_dog = bun.add_frank(frank)
     ketchup = dispense_ketchup()
     mustard = dispense_mustard()
-    hotdog.add_condiments(ketchup, mustard)
-    return hotdog
-
-assert isinstance(create_hot_dog(), HotDog)
+    hot_dog.add_condiments(ketchup, mustard)
+    dispense_hot_dog_to_customer(hot_dog)

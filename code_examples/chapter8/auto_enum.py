@@ -6,4 +6,4 @@ class MotherSauce(Enum):
     TOMATO = auto()
     HOLLANDAISE = auto()
 
-assert repr(list(MotherSauce)) =="[<MotherSauce.BÉCHAMEL: 1>, <MotherSauce.VELOUTÉ: 2>, <MotherSauce.ESPAGNOLE: 3>, <MotherSauce.TOMATO: 4>, <MotherSauce.HOLLANDAISE: >]"
+assert repr(list(MotherSauce)) =="[<MotherSauce.BÉCHAMEL: 1>, <MotherSauce.VELOUTÉ: 2>, <MotherSauce.ESPAGNOLE: 3>, <MotherSauce.TOMATO: 4>, <MotherSauce.HOLLANDAISE: 5>]"

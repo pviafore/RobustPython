@@ -14,6 +14,6 @@ Scenario Outline: Vegan Substitutions
 
  Examples: Not Vegan Substitutable
    | dish_name     | result |
-   | Meatloaf      | Then a non-vegan-substitutable error shows up |
-   | Meatballs     | Then a non-vegan-substitutable error shows up |
-   | Fried Shrimp  | Then a non-vegan-substitutable error shows up |
+   | Meatloaf      | a non-vegan-substitutable error shows up |
+   | Meatballs     | a non-vegan-substitutable error shows up |
+   | Fried Shrimp  | a non-vegan-substitutable error shows up |

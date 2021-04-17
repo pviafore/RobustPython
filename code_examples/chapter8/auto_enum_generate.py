@@ -1,7 +1,7 @@
 from enum import auto, Enum
 class MotherSauce(Enum):
 
-    def _generate_next_value_(name: str, start, count, last_values):
+    def _generate_next_value_(name: str, start, count, last_values): # type: ignore
         return name.capitalize()
 
     BÉCHAMEL = auto()

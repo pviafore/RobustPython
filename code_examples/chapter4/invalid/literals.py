@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Literal,Set
+from typing import Literal
 
 @dataclass 
 class Error:
@@ -8,7 +8,7 @@ class Error:
 
 @dataclass
 class Snack:
-    name: Literal["Pretzel", "Hotdog"]
+    name: Literal["Pretzel", "Hot Dog"]
     condiments: set[Literal["Mustard", "Ketchup"]]
 
 Error(0, False)

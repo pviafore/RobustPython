@@ -1,7 +1,11 @@
 from typing import NewType
 
-def dispense_bun():
-    return None
+class Bun:
+    def add_frank(frank: str):
+        pass
+
+def dispense_bun() -> Bun:
+    return Bun()
 
 
 def dispense_ketchup():
@@ -11,27 +15,30 @@ def dispense_mustard():
     return None
 
 class HotDog:
-    def place_in_bun(self, bun):
-        pass
     
     def add_condiments(self, *args):
         pass
 
-def dispense_hotdog() -> HotDog:
-    return HotDog()
-
-PreparedHotDog = NewType("PreparedHotDog", HotDog)
-def create_hot_dog() -> HotDog:
-    bun = dispense_bun()
-    hotdog = dispense_hotdog()
-    hotdog.place_in_bun(bun)
-    ketchup = dispense_ketchup()
-    mustard = dispense_mustard()
-    hotdog.add_condiments(ketchup, mustard)
-    return PreparedHotDog(hotdog)
-
-
-def place_on_plate(hotdog: PreparedHotDog):
+def dispense_hot_dog_to_customer(hot_dog: HotDog):
     pass
 
-place_on_plate(HotDog())
+def dispense_frank() -> str:
+    return "Frank"
+
+def serve_to_customer(*args):
+    pass
+
+ReadyToServeHotDog = NewType("ReadyToServeHotDog", HotDog)
+def create_hot_dog():
+    bun = dispense_bun()
+    frank = dispense_frank()
+    hot_dog = bun.add_frank(frank)
+    ketchup = dispense_ketchup()
+    mustard = dispense_mustard()
+    hot_dog.add_condiments(ketchup, mustard)
+    dispense_hot_dog_to_customer(hot_dog)
+
+def make_snack():
+    serve_to_customer(ReadyToServeHotDog(HotDog()))
+
+make_snack()

@@ -15,7 +15,7 @@ def create_author_count_mapping(cookbooks: list[Cookbook]):
 
 def test_create_author_count():
     cookbooks = [Cookbook('Pat Viafore'), Cookbook('Pat Viafore'), Cookbook('J. Kenji Lopez-Alt')]
-    assert create_author_count_mappping(cookbooks) == {
+    assert create_author_count_mapping(cookbooks) == {
         'Pat Viafore': 2,
         'J. Kenji Lopez-Alt': 1
     }

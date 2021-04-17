@@ -1,8 +1,14 @@
 def dispense_bun():
-    return None
+    return Bun()
 
-def dispense_hotdog():
-    return HotDog
+class HotDog:
+    
+    def add_condiments(self, *args):
+        pass
+
+class Bun:
+    def add_frank(self, frank: str) -> HotDog:
+        return HotDog()
 
 def dispense_ketchup():
     return None
@@ -10,34 +16,30 @@ def dispense_ketchup():
 def dispense_mustard():
     return None
 
-class HotDog:
-    def dispense_in_bun(self, bun):
-        pass
-    
-    def add_condiments(self, *args):
-        pass
+def dispense_frank() -> str:
+    return "frank"
 
-def print_error_code(text):
-    print(text)
+def dispense_hot_dog_to_customer(hot_dog: HotDog):
+    pass
 
 def create_hot_dog():
     bun = dispense_bun()
     if bun is None:
         print_error_code("Bun unavailable. Check for bun")
-        return None
-    hotdog = dispense_hotdog()
-    if hotdog is None:
-        print_error_code("Hotdog unavailable. Check for hotdog")
-        return None
-    hotdog.place_in_bun(bun)
+        return 
 
+    hotdog = dispense_hot_dog()
+    if hotdog is None:
+        print_error_code("Hot Dog unavailable. Check for Hot Dog")
+        return 
+
+    frank = dispense_frank()
+    hot_dog = bun.add_frank(frank)
+    if ketchup is None or mustard is None:
+        print_error_code("Check for invalid catsup")
+        return 
 
     ketchup = dispense_ketchup()
     mustard = dispense_mustard()
-    if ketchup is None or mustard is None:
-        print_error_code("Check for invalid catsup")
-        return None
-    hotdog.add_condiments(ketchup, mustard)
-    return hotdog
-
-assert create_hot_dog() is None
+    hot_dog.add_condiments(ketchup, mustard)
+    dispense_hot_dog_to_customer(hot_dog)

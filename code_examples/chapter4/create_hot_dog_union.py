@@ -1,21 +1,21 @@
-from typing import Union
+from typing import Optional, Union
+
 class HotDog:
     pass
 
-def create_hot_dog() -> HotDog:
+class Pretzel:
+    pass
+
+def dispense_hot_dog() -> HotDog:
     return HotDog()
 
-def are_ingredients_available():
-    return True
+def dispense_pretzel() -> Pretzel:
+    return Pretzel()
 
-def order_interrupted():
-    return True
-
-def dispense_hotdog() -> Union[HotDog, str]:
-    if not are_ingredients_available():
-        return "Not all ingredients available"
-    if order_interrupted():
-        return "Order interrupted"
-    return create_hot_dog()
-
-assert dispense_hotdog() == "Order interrupted"
+from typing import Union
+def dispense_snack(user_input: str) -> Union[HotDog, Pretzel]:
+    if user_input == "Hot Dog":
+        return dispense_hot_dog()
+    elif user_input == "Pretzel":
+        return dispense_pretzel()
+    raise RuntimeError("Should never reach this code, as an invalid input has been")

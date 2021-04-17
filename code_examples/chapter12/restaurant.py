@@ -103,7 +103,6 @@ food_truck.move_location(Coordinates())
 
 def display_restaurant_data(restaurant: Restaurant):
     data = restaurant.get_restaurant_data()
-    print(data)
     # ... snip drawing code here ...
 
 restaurants: list[Restaurant] = [food_truck]

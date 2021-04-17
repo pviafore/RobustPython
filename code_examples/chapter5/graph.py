@@ -1,23 +1,22 @@
 from collections import defaultdict
 from typing import Generic, NewType, TypeVar, Union
-from typing import Dict, List
 
 Restaurant = NewType('Restaurant', str)
 Recipe = NewType('Recipe', str)
 
 
-T = TypeVar("T")
-W = TypeVar("W")
+Node = TypeVar("Node")
+Edge = TypeVar("Edge")
 
-class Graph(Generic[T, W]):
+class Graph(Generic[Node, Edge]):
     def __init__(self):
         
-        self.edges: Edges = defaultdict(list)
+        self.edges: dict[Node, list[Edge]] = defaultdict(list)
 
-    def add_relation(self, node: T, to: W):
+    def add_relation(self, node: Node, to: Edge):
         self.edges[node].append(to)
 
-    def get_relations(self, node: T) -> list[W]:
+    def get_relations(self, node: Node) -> list[Edge]:
         return self.edges[node]
 
 restaurants: Graph[Restaurant, Restaurant] = Graph()

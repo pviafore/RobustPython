@@ -1,3 +1,4 @@
+import decimal
 from dataclasses import dataclass
 from enum import auto, Enum
 from typing import Dict, Iterable, List, Tuple
@@ -60,17 +61,17 @@ class Item:
     name: str
     brand: str
     measure: ImperialMeasure
-    price_in_cents: int
+    price_in_cents: decimal.Decimal
     amount: float
 
 Inventory = dict[Store, list[Item]]   
 
 spaghetti = Item(
     "Spaghetti",
-    "Pat's Homeade",
+    "Pat's Homemade",
     ImperialMeasure.CUP,
     amount=4,
-    price_in_cents=160
+    price_in_cents=decimal.Decimal(160)
 ) 
 reserved_items: list[Item] = []
 delivered_items: list[Item] = []

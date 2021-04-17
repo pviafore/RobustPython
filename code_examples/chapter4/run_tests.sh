@@ -2,7 +2,6 @@
 python code_examples/chapter4/create_hot_dog.py
 python code_examples/chapter4/create_hot_dog_defensive.py
 python code_examples/chapter4/create_hot_dog_union.py
-python code_examples/chapter4/dispense_snack.py
 python code_examples/chapter4/product_type.py
 python code_examples/chapter4/sum_type.py
 python code_examples/chapter4/invalid/dispense_bun.py
