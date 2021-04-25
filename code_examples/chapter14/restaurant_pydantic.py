@@ -48,7 +48,7 @@ class Restaurant:
 
 def load_restaurant(filename: str) -> Restaurant:
     with open(filename) as yaml_file:
-        data = yaml.load(yaml_file)
+        data = yaml.safe_load(yaml_file)
         return Restaurant(**data)
 
 try:

@@ -19,15 +19,15 @@ class Square(Rectangle):
     def __init__(self, length: int):
         super().__init__(length, length)
 
-    def set_length(self, new_length):
+    def set_side_length(self, new_length):
         super().set_width(new_length)
         super().set_height(new_length)
 
     def set_width(self, new_width):
-        self.set_length(new_width)
+        self.set_side_length(new_width)
 
     def set_height(self, new_height):
-        self.set_length(new_height)
+        self.set_side_length(new_height)
 
 def double_width(rectangle: Rectangle):
     old_height = rectangle.get_height()

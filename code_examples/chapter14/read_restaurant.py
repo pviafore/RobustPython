@@ -1,7 +1,7 @@
 import yaml
 
 with open('code_examples/chapter14/restaurant.yaml') as yaml_file:
-    restaurant = yaml.load(yaml_file)
+    restaurant = yaml.safe_load(yaml_file)
 
 assert restaurant == {
     "name": "Viafore's",
@@ -111,6 +111,6 @@ class Restaurant(TypedDict):
 
 def load_restaurant(filename: str) -> Restaurant:
     with open(filename) as yaml_file:
-        return yaml.load(yaml_file)
+        return yaml.safe_load(yaml_file)
 
 load_restaurant('code_examples/chapter14/restaurant.yaml')

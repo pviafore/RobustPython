@@ -5,9 +5,10 @@
 def adjust_recipe(recipe, servings):
     old_servings = recipe.pop(0)
     factor = servings / old_servings
-    return {"servings": servings} | \
-           {ingredient: (amount*factor, unit)
-            for ingredient, amount, unit in recipe}
+    new_recipe = {ingredient: (amount*factor, unit) 
+                  for ingredient, amount, unit in recipe} 
+    new_recipe["servings"] = servings
+    return new_recipe
 
     
 def test_adjust_recipe():

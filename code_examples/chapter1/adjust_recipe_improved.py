@@ -24,7 +24,8 @@ class Recipe:
 # Take a meal recipe and change the number of servings
 # recipe is a Recipe class
 def adjust_recipe(recipe, servings):
-    new_ingredients = list(recipe.ingredients)
+    # create a copy of the ingredients
+    new_ingredients = list(recipe.get_ingredients())
     recipe.clear_ingredients()
     for ingredient in new_ingredients:
         ingredient.adjust_proportion(Fraction(servings, recipe.servings))

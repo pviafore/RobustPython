@@ -37,8 +37,8 @@ class BaconCheeseburger:
     # NOTE! no split_in_half method
 
 import math
-def split_order(order):
-    dishes = order.split_in_half()
+def split_dish(dish):
+    dishes = dish.split_in_half()
     assert len(dishes) == 2
     for half_dish in dishes:
         half_dish.cost = math.ceil(half_dish.cost) / 2
@@ -46,7 +46,7 @@ def split_order(order):
     return dishes
 
 sandwich = BLTSandwich()
-dishes = split_order(sandwich)
+dishes = split_dish(sandwich)
 assert dishes[0].cost == 3.5
 assert dishes[0].name == "½ BLT" 
 assert dishes[0].cost == dishes[1].cost

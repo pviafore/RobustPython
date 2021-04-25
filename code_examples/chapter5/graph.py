@@ -27,5 +27,8 @@ restaurant_dishes: Graph[Restaurant, Recipe] = Graph()
 recipes.add_relation(Recipe('Pasta Bolognese'), 
                      Recipe('Pasta with Sausage and Basil'))
 
+cookbook_recipes.add_relation(Cookbook('The Food Lab'),
+                              Recipe('Pasta Bolognese'))
+
 restaurant_dishes.add_relation(Restaurant('Viafores'),
-                        Recipe('Pasta Bolognese'))
+                               Recipe('Pasta Bolognese'))
