@@ -20,6 +20,9 @@ class Recipe:
 
     def clear_ingredients(self):
         self.ingredients.clear()
+
+    def get_ingredients(self):
+        return self.ingredients
     
 # Take a meal recipe and change the number of servings
 # recipe is a Recipe class

@@ -69,7 +69,7 @@ assert chicken_noodle_soup.garnishes == {parsley, pepper}
 from copy import deepcopy
 noodle_soup = deepcopy(chicken_noodle_soup)
 noodle_soup.make_vegetarian()
-assert noodle_soup.get_ingredient_names() == {'Garlic', 'Pepper', 'Carrots', 'Celery', 'Onion', 'Noodles', 'Parsley', 'Vegetable Broth'}
+assert noodle_soup.get_ingredient_names() == {'Garlic', 'Pepper', 'Carrots', 'Celery', 'Onions', 'Noodles', 'Parsley', 'Vegetable Broth'}
 
 
 assert noodle_soup == noodle_soup
