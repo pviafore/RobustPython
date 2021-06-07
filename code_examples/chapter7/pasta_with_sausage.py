@@ -75,10 +75,15 @@ def make_pasta_with_sausage(servings): # <2>
     adjusted_recipe = adjust_recipe(pasta_with_sausage, servings)
 
     print("Prepping ingredients") # <3>
-    garlic_and_tomatoes = recipe_maker.dice(adjusted_recipe.get_ingredient('Plum Tomato'),
-                                            adjusted_recipe.get_ingredient('Garlic'))
-    grated_cheese = recipe_maker.grate(adjusted_recipe.get_ingredient('Pecorino Romano'))
-    sliced_basil = recipe_maker.chiffonade(adjusted_recipe.get_ingredient('Basil Leaves'))
+    adjusted_tomatoes = adjusted_recipe.get_ingredient('Plum Tomato')
+    adjusted_garlic = adjusted_recipe.get_ingredient('Garlic')
+    adjusted_cheese = adjusted_recipe.get_ingredient('Pecorino Romano')
+    adjusted_basil = adjusted_recipe.get_ingredient('Basil Leaves')
+
+    garlic_and_tomatoes = recipe_maker.dice(adjusted_tomatoes,
+                                            adjusted_garlic)
+    grated_cheese = recipe_maker.grate(adjusted_cheese)
+    sliced_basil = recipe_maker.chiffonade(adjusted_basil)
 
     print("Cooking Pasta") # <4>
     pasta_pot.add(adjusted_recipe.get_ingredient('Water'))
