@@ -1,7 +1,7 @@
 name: Viafore's
 owner: Pat Viafore
 address: 123 Fake St. Fakington, FA 01234
-employees: 
+employees:
   - name: Pat Viafore
     position: Chef
     payment_details:
@@ -35,8 +35,8 @@ dishes:
     description: Spaghetti with a rich Tomato and Beef Sauce
   - name: Caprese Salad
     price_in_cents: 795
-    description: Tomato, Buffalo Mozzarella and Basil, drizzled with EVOO Olive Oil and Balsamic Vinegar from Moderna
+    description: Tomato, Buffalo Mozzarella and Basil, drizzled with EVOO and Balsamic Vinegar
     picture: caprese.png
-number_of_seats: 12 
+number_of_seats: 12
 to_go: true
 delivery: false

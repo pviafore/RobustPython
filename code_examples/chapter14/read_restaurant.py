@@ -61,7 +61,7 @@ assert restaurant == {
         "name": "Caprese Salad",
         "price_in_cents": 795,
         "description": ("Tomato, Buffalo Mozzarella and Basil," +
-                       " drizzled with EVOO Olive Oil and Balsamic Vinegar from Moderna"),
+                       " drizzled with EVOO and Balsamic Vinegar"),
         "picture": "caprese.png"
     }],
     'number_of_seats': 12,
