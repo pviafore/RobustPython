@@ -4,7 +4,7 @@ from enum import auto, Enum
 from typing import Dict, Iterable, List, Tuple
 
 class ImperialMeasure(Enum):
-    TEASPOON = auto() 
+    TEASPOON = auto()
     TABLESPOON = auto()
     CUP = auto()
 
@@ -14,7 +14,7 @@ class Ingredient:
     brand: str
     amount: float = 1
     units: ImperialMeasure = ImperialMeasure.CUP
-    
+
     def __add__(self, rhs: 'Ingredient'):
         # make sure we are adding the same ingredient
         assert (self.name, self.brand) == (rhs.name, rhs.brand)
@@ -28,14 +28,14 @@ class Ingredient:
             (ImperialMeasure.TABLESPOON, ImperialMeasure.TEASPOON): 3,
             (ImperialMeasure.TEASPOON, ImperialMeasure.CUP): 1/48,
             (ImperialMeasure.TEASPOON, ImperialMeasure.TABLESPOON): 1/3,
-            (ImperialMeasure.TEASPOON, ImperialMeasure.TEASPOON): 1 
+            (ImperialMeasure.TEASPOON, ImperialMeasure.TEASPOON): 1
         }
 
         return Ingredient(rhs.name,
                           rhs.brand,
                           rhs.amount + self.amount * conversion[(rhs.units, self.units)],
                           rhs.units)
-    
+
 
 @dataclass
 class Recipe:
@@ -64,7 +64,7 @@ class Item:
     price_in_cents: decimal.Decimal
     amount: float
 
-Inventory = dict[Store, list[Item]]   
+Inventory = dict[Store, list[Item]]
 
 spaghetti = Item(
     "Spaghetti",
@@ -72,14 +72,14 @@ spaghetti = Item(
     ImperialMeasure.CUP,
     amount=4,
     price_in_cents=decimal.Decimal(160)
-) 
+)
 reserved_items: list[Item] = []
 delivered_items: list[Item] = []
 def get_grocery_inventory() -> Inventory:
     # reach out to APIs and populate the dictionary
     return {
         Store(Coordinates(0,0), "Pat's Market") : [spaghetti]
-    } 
+    }
 
 def reserve_items(store: Store, items: Iterable[Item]) -> bool:
     return True
@@ -104,20 +104,24 @@ class Order:
 
     def get_ingredients(self) -> list[Ingredient]:
         ''' Return a alphabetically sorted list of ingredients '''
-        # return a copy so that users won't inadvertently mess with 
+        # return a copy so that users won't inadvertently mess with
         # our internal data
         return sorted(deepcopy(self.__ingredients),
                          key=lambda ing: ing.name)
-    
-    def _get_matching_ingredient(self, ingredient: Ingredient) -> Optional[Ingredient]:
+
+    def _get_matching_ingredient(self,
+                                 ingredient: Ingredient) -> Optional[Ingredient]:
         try:
             return next(ing for ing in self.__ingredients if
-                        (ing.name, ing.brand) == (ingredient.name, ingredient.brand))
+                        ((ing.name, ing.brand) ==
+                         (ingredient.name, ingredient.brand)))
         except StopIteration:
             return None
 
     def add_ingredient(self, ingredient: Ingredient):
-        ''' adds the ingredient if it's not already added, or increases the amount if it has '''
+        ''' adds the ingredient if it's not already added,
+            or increases the amount if it has
+        '''
         target_ingredient = self._get_matching_ingredient(ingredient)
         if target_ingredient is None:
             # ingredient for the first time - add it
@@ -166,7 +170,7 @@ class _GroceryList:
 
 def wait_for_user_grocery_confirmation(grocery_list: _GroceryList):
     pass
-    
+
 def deliver_ingredients(grocery_list: _GroceryList):
     global delivered_items
     delivered_items += grocery_list.get_grocery_order()
@@ -185,7 +189,7 @@ def create_grocery_list(order: Order, inventory: Inventory):
 def make_order(recipes):
     order = Order(recipes)
     # the user can make changes if needed
-    display_order(order) 
+    display_order(order)
     wait_for_user_order_confirmation(order)
     if order.is_confirmed():
         grocery_inventory = get_grocery_inventory()
