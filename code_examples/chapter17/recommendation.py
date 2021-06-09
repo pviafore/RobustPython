@@ -11,15 +11,15 @@ def get_daily_specials():
 
 def recommend_meal(last_meal: Meal,
                    specials: list[Meal],
-                   surplus_ingredients: list[Ingredient]) -> list[Meal]:
+                   surplus: list[Ingredient]) -> list[Meal]:
     highest_proximity = 0
     for special in specials:
-        if (proximity := get_proximity(special, surplus_ingredients)) > highest_proximity:
+        if (proximity := get_proximity(special, surplus)) > highest_proximity:
             highest_proximity = proximity
 
     grouped_by_surplus_matching = []
     for special in specials:
-        if get_proximity(special, surplus_ingredients) == highest_proximity:
+        if get_proximity(special, surplus) == highest_proximity:
             grouped_by_surplus_matching.append(special)
 
     filtered_meals = []
