@@ -29,7 +29,11 @@ class ServableHotDogChecker(BaseChecker):
             self._is_in_prepare_for_serving = True
 
     def leave_functiondef(self, node: astroid.scoped_nodes.FunctionDef):
-        self._is_in_prepare_for_serving = False
+        if (node.name == "prepare_for_serving" and
+            node.parent.name =="hotdog" and
+            isinstance(node.parent, astroid.scoped_nodes.Module)):
+
+            self._is_in_prepare_for_serving = False
 
     def visit_call(self, node: astroid.node_classes.Call):
         if node.func.name != 'ReadyToServeHotDog':
